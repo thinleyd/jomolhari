@@ -2978,7 +2978,7 @@ input[type="file"] > input[type="button"]::-moz-focus-inner {
   }
 }
 .bd-docs .page-header {
-  min-height: 50vh;
+  min-height: 10vh;
 }
 .offline-doc .navbar.navbar-transparent {
   padding-top: 25px;
@@ -3006,7 +3006,7 @@ input[type="file"] > input[type="button"]::-moz-focus-inner {
   position: absolute;
   background-size: cover;
   background-position: center center;
-  width: 100%;
+  width: 50%;
   height: 100%;
   z-index: -1;
 }
@@ -5697,7 +5697,7 @@ input[type="file"] > input[type="button"]::-moz-focus-inner {
   right: -15px;
 }
 .presentation-title {
-  font-size: 8em;
+  font-size: 100em;
   font-weight: 700;
   margin: 0;
   color: #ffffff;

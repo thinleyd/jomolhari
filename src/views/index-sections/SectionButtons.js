@@ -464,7 +464,7 @@
 // export default SectionButtons;
 
 import React, { useContext } from "react";
-import "../../views/index-sections/Works.css"
+import "../../views/index-sections/Works.css";
 import Upwork from "../../assets/img/Upwork.png";
 import Fiverr from "../../assets/img/fiverr.png";
 import Amazon from "../../assets/img/amazon.png";
@@ -472,7 +472,8 @@ import Shopify from "../../assets/img/Shopify.png";
 import Facebook from "../../assets/img/Facebook.png";
 import { themeContext } from "../../Context";
 import { motion } from "framer-motion";
-import {Link} from 'react-scroll'
+import { Link } from "react-scroll";
+import { Typography } from "@mui/material";
 const SectionButtons = () => {
   // context
   const theme = useContext(themeContext);
@@ -485,23 +486,24 @@ const SectionButtons = () => {
       <div className="w-left">
         <div className="awesome">
           {/* dark Mode */}
-          <span style={{ color: "black" }}>
-            Works for All these
-          </span>
-          <span>Brands & Clients</span>
-          <spane>
-            Lorem ispum is simpley dummy text of printing of printing Lorem
-            <br />
-            ispum is simpley dummy text of printingLorem ispum is simpley dummy
-            text
-            <br />
-            y dummy text of printingLorem
-            <br />
+          <Typography
+            variant="body1"
+            fontSize={{ sm: "1px", md: "1px", lg: "20px" }}
+            fontFamily={"Times New Roma"}
+          >
+            Work For all
+          </Typography>
+
+          <Typography
+            variant="body1"
+            fontSize={{ sm: "17px", md: "18px", lg: "20px" }}
+            fontFamily={"Times New Roma"}
+          >
+            Lorem ispum is simpley dummy text of printing of printing Lorem<br/>
+            ispum is simpley dummy text of printingLorem ispum is simpley dummym<br/>
             ispum is simpley dummy text of printing
-          </spane>
-          {/* <Link to="contact" smooth={true} spy={true}>
-            <button className="button s-button">Hire Me</button>
-          </Link> */}
+          </Typography>
+
           <div
             className="blur s-blur1"
             style={{ background: "#ABF1FF94" }}
@@ -519,32 +521,60 @@ const SectionButtons = () => {
           className="w-mainCircle"
         >
           <div className="w-secCircle">
-            {/* <img src={Upwork} alt="" /> */}
-            <h4>Amenities</h4>
+            <Typography
+              fontSize={{ sm: "17px", md: "18px", lg: "20px" }}
+              fontFamily={"Times New Roma"}
+            >
+              Amenities
+            </Typography>
           </div>
           <div className="w-secCircle">
-            {/* <img src={Fiverr} alt="" /> */}
-            <h4>Destination</h4>
+            <Typography
+              fontSize={{ sm: "17px", md: "18px", lg: "20px" }}
+              fontFamily={"Times New Roma"}
+            >
+              Destination
+            </Typography>
           </div>
           <div className="w-secCircle">
-            {/* <img src={Amazon} alt="" /> */}
-            <h4>Districts</h4>
+            <Typography
+              fontSize={{ sm: "17px", md: "18px", lg: "20px" }}
+              fontFamily={"Times New Roma"}
+            >
+              Districts
+            </Typography>
           </div>{" "}
           <div className="w-secCircle">
-            {/* <img src={Shopify} alt="" /> */}
-            <h4>Attractions</h4>
+            <Typography
+              fontSize={{ sm: "17px", md: "18px", lg: "20px" }}
+              fontFamily={"Times New Roma"}
+            >
+              Attractions
+            </Typography>
           </div>
           <div className="w-secCircle">
-            {/* <img src={Facebook} alt="" /> */}
-            <h4>Accessibilities</h4>
+            <Typography
+              fontSize={{ sm: "17px", md: "18px", lg: "20px" }}
+              fontFamily={"Times New Roma"}
+            >
+              Accessibilities
+            </Typography>
           </div>
           <div className="w-secCircle">
-            {/* <img src={Facebook} alt="" /> */}
-            <h4>Accomodation</h4>
+            <Typography
+              fontSize={{ sm: "17px", md: "18px", lg: "20px" }}
+              fontFamily={"Times New Roma"}
+            >
+              Accomodation
+            </Typography>
           </div>
           <div className="w-secCircle">
-            {/* <img src={Shopify} alt="" /> */}
-            <h4>Bhutan</h4>
+            <Typography
+              fontSize={{ sm: "17px", md: "18px", lg: "20px" }}
+              fontFamily={"Times New Roma"}
+            >
+              Bhutan
+            </Typography>
           </div>
         </motion.div>
         {/* background Circles */}
@@ -556,4 +586,3 @@ const SectionButtons = () => {
 };
 
 export default SectionButtons;
-

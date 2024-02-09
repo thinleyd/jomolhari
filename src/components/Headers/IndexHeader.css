@@ -1,0 +1,137 @@
+.page-header {
+    background-color: #b2afab;
+    background-position: center center;
+    background-size: cover;
+    min-height: 100vh;
+    max-height: 999px;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .page-header .filter::after {
+    background-color: rgba(0, 0, 0, 0.5);
+    content: "";
+    display: block;
+    height: 100%;
+    left: 0;
+    top: 0;
+    position: absolute;
+    width: 100%;
+    z-index: 1;
+  }
+  .page-header.page-header-small {
+    min-height: 65vh !important;
+    max-height: 700px;
+  }
+  .page-header.page-header-xs {
+    min-height: 40vh !important;
+  }
+  .page-header.section-dark .content-center,
+  .page-header.section-dark .category-absolute {
+    z-index: 1;
+  }
+  
+  .page-header .motto {
+    text-align: left;
+    z-index: 3;
+    color: #fff;
+    position: relative;
+  }
+  .moving-clouds {
+    position: absolute;
+    z-index: 1;
+    bottom: 0;
+    left: 0;
+    width: 250.625em;
+    height: 43.75em;
+    -webkit-animation: cloudLoop 80s linear infinite;
+    animation: cloudLoop 80s linear infinite;
+  }
+  .title-brand {
+    max-width: 730px;
+    margin: 0 auto;
+    position: relative;
+    text-align: center;
+    color: #ffffff;
+    display: block;
+  }
+  .title-brand .type {
+    position: absolute;
+    font-size: 20px;
+    background: #132026;
+    padding: 6px 10px;
+    border-radius: 4px;
+    top: 0;
+    font-weight: 600;
+    margin-top: 10px;
+    right: -15px;
+  }
+  .presentation-title {
+    font-size: 7rem;
+    font-weight: 700;
+    margin: 0;
+    color: #ffffff;
+    background: #fbf8ec;
+    background: linear-gradient(to bottom, #ffffff 35%, #4e6773 100%);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+}
+
+  /* Extra small devices (phones, less than 576px) */
+  @media screen and (max-width: 576px ) {
+    .page-header {
+        min-height: 65vh;
+      }
+      .presentation-title {
+        font-size: 3rem;
+      }
+  }
+
+  /* Small devices (tablets, 576px and up) */
+  @media screen and (min-width: 576px) and (max-width: 767.98px) {
+    .page-header {
+        min-height: 70vh;
+      }
+      .presentation-title {
+        font-size: 4rem;
+      }
+  }
+
+  /* Medium devices (desktops, 768px and up) */
+  @media screen and (min-width: 768px) and (max-width: 991.98px) {
+    .page-header {
+        min-height: 70vh;
+      }
+      .presentation-title {
+        font-size: 5rem;
+      }
+  }
+
+  /* Large devices (large desktops, 992px and up) */
+  @media screen and (min-width: 992px) and (max-width: 1199.98px) {
+    .page-header {
+        min-height: 70vh;
+      }
+      .presentation-title {
+        font-size: 5rem;
+      }
+  }
+
+  /* Extra large devices (extra large desktops, 1200px and up) */
+  @media screen and (min-width: 1200px) {
+
+      .presentation-title {
+        font-size: 5rem;
+      }
+  }
+
+
+
+
+  
+  
+  
