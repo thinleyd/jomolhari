@@ -1,31 +1,7 @@
-/*!
-
-=========================================================
-* Paper Kit React - v1.3.2
-=========================================================
-
-* Product Page: https://www.creative-tim.com/product/paper-kit-react
-
-* Copyright 2023 Creative Tim (https://www.creative-tim.com)
-* Licensed under MIT (https://github.com/creativetimofficial/paper-kit-react/blob/main/LICENSE.md)
-
-* Coded by Creative Tim
-
-=========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-*/
-import React from "react";
-
-// reactstrap components
-
-// core components
+import React,{ useState } from "react";
 import IndexNavbar from "components/Navbars/IndexNavbar.js";
 import IndexHeader from "components/Headers/IndexHeader.js";
 import DemoFooter from "components/Footers/DemoFooter.js";
-
-// index sections
 import SectionButtons from "views/index-sections/SectionButtons.js";
 import SectionNavbars from "views/index-sections/SectionNavbars.js";
 import SectionNavigation from "views/index-sections/SectionNavigation.js";
@@ -39,36 +15,87 @@ import SectionDark from "views/index-sections/SectionDark.js";
 import SectionLogin from "views/index-sections/SectionLogin.js";
 import SectionExamples from "views/index-sections/SectionExamples.js";
 import SectionDownload from "views/index-sections/SectionDownload.js";
-
+import ChatBot from 'react-simple-chatbot';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faComment, faTimes } from '@fortawesome/free-solid-svg-icons';
 function Index() {
-  document.documentElement.classList.remove("nav-open");
+  const [showChatbot, setShowChatbot] = useState(false);
   React.useEffect(() => {
     document.body.classList.add("index");
     return function cleanup() {
       document.body.classList.remove("index");
     };
-  });
+  }, []);
+
+  const steps =[
+    {
+      id:'Greet',
+      message:'Hello, Welcome to our websites',
+      trigger:'Ask Name'
+    },
+    {
+      id:'Ask Name',
+      message:'Please enter your name',
+      trigger:'waiting1'
+    },{
+       id:'waiting1',
+      user:true,
+      trigger:'Name'
+    },{
+       id:'Name',
+       message:'Hi {previousValue}, Please select the query.',
+       end:true
+    }
+  ]
+
+  // Function to toggle the visibility of the chatbot
+  const toggleChatbot = () => {
+    setShowChatbot(prevState => !prevState);
+  };
+
+  const toggleChat = () => {
+    setShowChatbot(false);
+  };
+
+
   return (
-    <>
-      <IndexNavbar />
-      <IndexHeader />
-      <div className="main">
-        <SectionButtons />
-        <SectionNavbars />
-        <SectionNavigation />
-        <SectionProgress />
-        <SectionNotifications />
-        <SectionTypography />
-        <SectionJavaScript />
-        <SectionCarousel />
-        <SectionNucleoIcons />
-        <SectionDark />
-        <SectionLogin />
-        <SectionExamples />
-        <SectionDownload />
-        <DemoFooter />
-      </div>
-    </>
+      <>
+
+        <IndexNavbar />
+        <IndexHeader />
+        <div className="main">
+          <SectionButtons />
+          <SectionNavbars />
+          <SectionNavigation />
+          <SectionProgress />
+          <SectionNotifications />
+          <SectionTypography />
+          <SectionJavaScript />
+          <SectionCarousel />
+          <SectionNucleoIcons />
+          <SectionDark />
+          <SectionLogin />
+          <SectionExamples />
+          <SectionDownload />
+          <DemoFooter />
+        </div>
+        <div className="chatbot-container">
+          {/* Button to toggle the visibility of the chatbot */}
+          <button className="chat-icon-button" onClick={toggleChatbot}>
+            <FontAwesomeIcon icon={faComment} style={{ fontSize: '24px', color: 'purple' }} />
+          </button>
+          {/* Chatbot container */}
+          {showChatbot && (
+              <div className="chatbot-container">
+                <ChatBot steps={steps} />
+                <button className="close-button" onClick={toggleChat}>
+                  <FontAwesomeIcon icon={faTimes} style={{ fontSize: '24px', color: 'purple' }}/>
+                </button>
+              </div>
+          )}
+        </div>
+
+      </>
   );
 }
 

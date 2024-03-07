@@ -40,6 +40,13 @@
     }
   }
 
+.chatbot-container {
+    position: fixed;
+    bottom: 20px; /* Adjust this value as needed to position the chatbot */
+    right: 20px; /* Adjust this value as needed to position the chatbot */
+    z-index: 1000; /* Ensure the chatbot appears above other content */
+}
+
   
 
   
